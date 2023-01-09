@@ -29,7 +29,7 @@ p.textContent = todo.text
 document.querySelector('body').appendChild(p)
 })
 
-document.querySelector('#add-todo').addEventListener('click', function(e){
+document.querySelector('input#add-new-todo').addEventListener('input', function(e){
 document.querySelector('body').appendChild(p)
 p.textContent = e.target.value
 })
