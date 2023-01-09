@@ -30,6 +30,7 @@ document.querySelector('body').appendChild(p)
 })
 
 document.querySelector('input#add-new-todo').addEventListener('input', function(e){
-document.querySelector('body').appendChild(p)
-p.textContent = e.target.value
+const u = document.createElement('p')
+u.textContent = e.target.value
+document.querySelector('body').appendChild(u)
 })
