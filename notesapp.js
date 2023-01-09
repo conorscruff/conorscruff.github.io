@@ -18,3 +18,8 @@ e.target.textContent = 'The button was clicked.'
   note.remove()
   })
 })
+document.querySelector('#search-box').addEventListener('change', function(e){
+ document.querySelectorAll('.note').forEach(function(note){
+  note.textContent = e.target.value
+ })
+})
