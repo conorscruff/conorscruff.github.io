@@ -20,7 +20,7 @@ return !todo.completed
 })
 
 const summary = document.createElement('h2')
-summary.textContent = 'You have ${incompleteTodos.length} todos left'
+summary.textContent = 'You have <script>${incompleteTodos.length}</script> todos left'
 document.querySelector('body').appendChild(summary)
 
 todos.forEach(function(todo) {
