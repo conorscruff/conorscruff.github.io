@@ -13,3 +13,6 @@ document.querySelector('button').addEventListener('click', function(e){
 console.log('Did this work?')
 e.target.textContent = 'The button was clicked.'
 })
+document.querySelectorAll('button').addEventListener('click', function(){
+ console.log('Delete all notes')
+})
