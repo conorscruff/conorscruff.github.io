@@ -14,5 +14,6 @@ console.log('Did this work?')
 e.target.textContent = 'The button was clicked.'
 })
 document.querySelector('#remove').addEventListener('click', function(){
- console.log('Delete all notes')
+ document.querySelectorAll('.note').forEach(function(note){
+  note.remove()
 })
