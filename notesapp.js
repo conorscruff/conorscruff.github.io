@@ -9,6 +9,9 @@ title: 'Office modification',
 body: 'Get a new seat'
 }]
 
+const filters = {
+ searchText: ''
+}
 document.querySelector('#create').addEventListener('click', function(e){
 console.log('Did this work?')
 e.target.textContent = 'The button was clicked.'
