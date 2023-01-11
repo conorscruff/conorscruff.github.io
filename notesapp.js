@@ -23,10 +23,6 @@ const renderNotes = function(notes, filters){
   document.querySelector('body').appendChild(noteEl)
  })
 }
-const removeNotes = function(notes){
- document.querySelectorAll('p').forEach(function(note){
-  note.remove()
- })
 renderNotes(notes, filters)
 document.querySelector('#create').addEventListener('click', function(e){
 console.log('Did this work?')
