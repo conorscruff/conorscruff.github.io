@@ -16,6 +16,7 @@ const renderNotes = function(notes, filters){
  const filteredNotes = notes.filter(function(note){
  return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
  })
+ console.log("Did this work?")
 }
 renderNotes(notes, filters)
 document.querySelector('#create').addEventListener('click', function(e){
