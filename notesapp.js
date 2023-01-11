@@ -29,8 +29,6 @@ e.target.textContent = 'The button was clicked.'
   })
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
- document.querySelectorAll('.note').forEach(function(note){
   filters.searchText = e.target.value
   renderNotes(notes, filters)
- })
 })
