@@ -12,6 +12,12 @@ body: 'Get a new seat'
 const filters = {
  searchText: ''
 }
+const renderNotes = function(notes, filters){
+ const filteredNotes = notes.filter(function(note){
+ return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+ })
+}
+renderNotes(notes, filters)
 document.querySelector('#create').addEventListener('click', function(e){
 console.log('Did this work?')
 e.target.textContent = 'The button was clicked.'
@@ -23,6 +29,7 @@ e.target.textContent = 'The button was clicked.'
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
  document.querySelectorAll('.note').forEach(function(note){
-  note.textContent = e.target.value
+  filters.searchText = e.target.value
+  renderNotes(notes, filters)
  })
 })
