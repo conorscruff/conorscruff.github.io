@@ -21,7 +21,7 @@ const renderNotes = function(notes, filters){
   const noteEl = document.createElement('p')
   noteEl.textContent = note.title
   document.querySelector('body').appendChild(noteEl)
- }
+ })
 }
 renderNotes(notes, filters)
 document.querySelector('#create').addEventListener('click', function(e){
