@@ -18,7 +18,6 @@ const renderNotes = function(notes, filters){
  })
  
  filteredNotes.forEach(function (note){
-  removeNotes(notes)
   const noteEl = document.createElement('p')
   noteEl.textContent = note.title
   document.querySelector('body').appendChild(noteEl)
