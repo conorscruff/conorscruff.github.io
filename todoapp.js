@@ -16,11 +16,14 @@ completed: true
 }]
 
 const filters = {
-  searchText: ''
+  searchText: 'buy'
 }
-const filteredTodos = function(todos, filters){
-  todos.filter(todos.text.toLowerCase().includes(filters.searchText.toLowerCase())
+const filterTodos = function(todos, filters){
+  return todos.filter(todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
 }
+const filteredTodos = filterTodos(todos, filters);
+
+  console.log(filteredTodos);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
