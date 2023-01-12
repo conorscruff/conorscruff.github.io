@@ -24,7 +24,9 @@ const filterTodos = function(todos, filters){
   })
 }
 
-  console.log(filterTodos(todos, filters));
+const filteredTodos = filterTodos(todos, filters);
+
+conosole.log(filteredTodos);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
