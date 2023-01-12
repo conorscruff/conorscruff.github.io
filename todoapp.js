@@ -19,7 +19,7 @@ const filters = {
   searchText: 'buy'
 }
 const filterTodos = function(todos, filters){
-  return todos.filter(todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+  return todos.filter(todo.text.toLowerCase().includes(filters.searchText.toLowerCase()));
 }
 const filteredTodos = filterTodos(todos, filters);
 
