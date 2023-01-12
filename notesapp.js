@@ -20,7 +20,7 @@ const renderNotes = function(notes, filters){
  filteredNotes.forEach(function (note){
   const noteEl = document.createElement('p')
   noteEl.textContent = note.title
-  document.querySelector('div').appendChild(noteEl)
+  document.querySelector('#list-notes').appendChild(noteEl)
  })
 }
 renderNotes(notes, filters)
