@@ -19,7 +19,7 @@ const filters = {
   searchText: ''
 }
 const filteredTodos = function(todos, filters){
-  return todos.text.toLowerCase().includes(filters.searchText.toLowerCase()
+  return todos.text.toLowerCase().includes(filters.searchText.toLowerCase())
 }
 console.log(filteredTodos);
                                            
