@@ -26,7 +26,7 @@ const filterTodos = function(todos, filters){
 
 const filteredTodos = filterTodos(todos, filters);
 
-conosole.log(filteredTodos);
+console.log(filteredTodos);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
