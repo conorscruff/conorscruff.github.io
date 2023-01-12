@@ -4,7 +4,7 @@ const filters = {
   searchText: 2
 }
 function filterItems(array, filters) {
-  return array.filter(array.el = filters.searchText);
+  return array.filter((el) => el = filters.searchText);
 }
 console.log(array);
 console.log(filterItems(array, filters));
