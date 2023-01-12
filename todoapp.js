@@ -18,12 +18,13 @@ completed: true
 const filters = {
   searchText: 'buy'
 }
-const filterTodos = function(todos, filters){
-  return todos.filter(todos.text.toLowerCase().includes(filters.searchText.toLowerCase()));
+const filterTodos = function(todos, filters){ 
+  todos.forEach(function(todo){
+    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase());
+  }
 }
-const filteredTodos = filterTodos(todos, filters);
 
-  console.log(filteredTodos);
+  console.log(filterTodos(todos, filters);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
