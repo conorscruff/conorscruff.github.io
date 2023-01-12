@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+<head></head>
+<body>
+<h1>Scratchpad</h1>
+ 
+  <div id="pad-div"> </div>
+<script src="https://conorscruff.github.io/scratchpad.js"></script>
+</body>
+</html>
