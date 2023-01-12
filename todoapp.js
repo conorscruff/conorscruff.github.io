@@ -15,6 +15,14 @@ text: 'Exercise',
 completed: true
 }]
 
+const filters = {
+  searchText: ''
+}
+const filteredTodos = function(todos, filters){
+  return todos.text.toLowerCase().includes(filters.searchText.toLowerCase()
+}
+console.log(filteredTodos);
+                                           
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
 })
