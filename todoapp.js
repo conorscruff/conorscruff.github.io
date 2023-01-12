@@ -21,7 +21,7 @@ const filters = {
 const filterTodos = function(todos, filters){ 
   todos.forEach(function(todo){
     return todo.text.toLowerCase().includes(filters.searchText.toLowerCase());
-  }
+  })
 }
 
   console.log(filterTodos(todos, filters);
