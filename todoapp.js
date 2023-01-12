@@ -40,5 +40,5 @@ document.querySelector('#todo-list').appendChild(p)
 document.querySelector('input#add-new-todo').addEventListener('input', function(e){
 const u = document.createElement('p')
 u.textContent = e.target.value
-document.querySelector('body').appendChild(u)
+document.querySelector('#todo-list').appendChild(u)
 })
