@@ -25,6 +25,7 @@ const renderTodos = function(todos, filters){
   document.querySelector('#todo-list').innerHTML = '';
   filteredTodos.forEach(function(todo){
     const todoEl = document.createElement('p');
+    todoEl.textContent = todo.text;
     document.querySelector('#todo-list').appendChild(todoEl);
   })
 }
