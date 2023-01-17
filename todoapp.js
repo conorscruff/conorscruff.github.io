@@ -18,11 +18,17 @@ completed: true
 const filters = {
   searchText: 'buy'
 }
-const filterTodos = function(todos, filters){ 
-  todos.forEach(function(todo){
-    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase());
+const renderTodos = function(todos, filters){ 
+  const filteredTodos = todos.filter(function(todo){
+    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+  })
+  document.querySelector('#todo-list').innerHTML = '';
+  filteredTodos.forEach(function(todo){
+    const todoEl = document.createElement('p');
+    document.querySelector('#todo-list').appendChild(todoEl);
   })
 }
+renderTodos(todos, filters);
 
 const filteredTodos = filterTodos(todos, filters);
 
