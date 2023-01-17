@@ -29,7 +29,7 @@ const renderTodos = function(todos, filters){
     document.querySelector('#todo-list').appendChild(todoEl);
   })
 }
-renderTodos(todos, filters);
+console.log(renderTodos(todos, filters));
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
