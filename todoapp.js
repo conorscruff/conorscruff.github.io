@@ -29,10 +29,6 @@ const renderTodos = function(todos, filters){
   })
 }
 renderTodos(todos, filters);
-
-const filteredTodos = filterTodos(todos, filters);
-
-console.log(filteredTodos);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
