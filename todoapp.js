@@ -16,7 +16,7 @@ completed: true
 }]
 
 const filters = {
-  searchText: 'buy'
+  searchText: ''
 }
 const renderTodos = function(todos, filters){ 
   const filteredTodos = todos.filter(function(todo){
