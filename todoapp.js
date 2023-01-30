@@ -38,23 +38,23 @@ const renderTodos = function(todos, filters){
 }
 //the initial call of renderTodos
 renderTodos(todos, filters);
-                                           
+
+// we create a new array of incomplete todos on the basis of their completed attribute
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
 })
 
+//we create a summary heading and define the text, along with the length of incompleteTodos array
 const summary = document.createElement('h2')
 summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
 
+//we append this summary heading to the body of our document
 document.querySelector('body').appendChild(summary)
 
-//todos.forEach(function(todo) {
-//const p = document.createElement('p')
-//p.textContent = todo.text
-//document.querySelector('#todo-list').appendChild(p)
-//})
+//we add an event listener to our input field, and we take the e.target.value and assign it as our searchText in our filters object
 
 document.querySelector('input#add-new-todo').addEventListener('input', function(e){
 filters.searchText = e.target.value;
+//we then rerender the todos based on the updated info in our searchText in input
   renderTodos(todos, filters);
 })
