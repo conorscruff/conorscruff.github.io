@@ -44,7 +44,7 @@ return !todo.completed
 })
 
 const summary = document.createElement('h2')
-summary.textContent = 'Todos yet to complete:' + incompleteTodos.length
+summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
 
 document.querySelector('body').appendChild(summary)
 
