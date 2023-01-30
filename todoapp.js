@@ -1,3 +1,4 @@
+// our array of todos objects
 const todos = [{
 text: 'Order cat food',
 completed: false
@@ -14,16 +15,20 @@ completed: false
 text: 'Exercise',
 completed: true
 }]
-
+//our array of filters, with searchText as attribute
 const filters = {
   searchText: ''
 }
+//function renderTodos, returns true if todo.text matches searchText
 const renderTodos = function(todos, filters){ 
   const filteredTodos = todos.filter(function(todo){
     return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
   })
+  //renders filteredTodos in console
   console.log(filteredTodos);
+  //we first wipe the innerHTML of our todo-list div
   document.querySelector('#todo-list').innerHTML = '';
+  //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
   filteredTodos.forEach(function(todo){
     const todoEl = document.createElement('p');
     todoEl.textContent = todo.text;
@@ -31,9 +36,10 @@ const renderTodos = function(todos, filters){
   })
   
 }
+//the initial call of renderTodos
 renderTodos(todos, filters);
                                            
-const incompleteTodos = todos.filter(function(todo) {
+public const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
 })
 
