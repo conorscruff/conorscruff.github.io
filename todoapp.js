@@ -49,5 +49,6 @@ document.querySelector('body').appendChild(summary)
 
 document.querySelector('input#add-new-todo').addEventListener('input', function(e){
 filters.searchText.textContent = e.target.value;
+  console.log(e.target.value);
   renderTodos(todos, filters);
 })
