@@ -30,15 +30,15 @@ const renderTodos = function(todos, filters){
 const incompleteTodos = filteredTodos.filter(function(todo) {
 return !todo.completed
 })
-
+ //we first wipe the innerHTML of our todo-list div
+  document.querySelector('#todo-list').innerHTML = '';
 //we create a summary heading and define the text, along with the length of incompleteTodos array
 const summary = document.createElement('h2')
 summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
 
 //we append this summary heading to the div in our document
-document.querySelector('#summary').appendChild(summary)
-  //we first wipe the innerHTML of our todo-list div
-  document.querySelector('#todo-list').innerHTML = '';
+document.querySelector('#todo-list').appendChild(summary)
+ 
   //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
   filteredTodos.forEach(function(todo){
     const todoEl = document.createElement('p');
