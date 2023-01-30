@@ -26,6 +26,17 @@ const renderTodos = function(todos, filters){
   })
   //renders filteredTodos in console
   console.log(filteredTodos);
+  // we create a new array of incomplete todos on the basis of their completed attribute
+const incompleteTodos = filteredTodos.filter(function(todo) {
+return !todo.completed
+})
+
+//we create a summary heading and define the text, along with the length of incompleteTodos array
+const summary = document.createElement('h2')
+summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
+
+//we append this summary heading to the div in our document
+document.querySelector('#summary').appendChild(summary)
   //we first wipe the innerHTML of our todo-list div
   document.querySelector('#todo-list').innerHTML = '';
   //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
@@ -38,18 +49,6 @@ const renderTodos = function(todos, filters){
 }
 //the initial call of renderTodos
 renderTodos(todos, filters);
-
-// we create a new array of incomplete todos on the basis of their completed attribute
-const incompleteTodos = filteredTodos.filter(function(todo) {
-return !todo.completed
-})
-
-//we create a summary heading and define the text, along with the length of incompleteTodos array
-const summary = document.createElement('h2')
-summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
-
-//we append this summary heading to the div in our document
-document.querySelector('#summary').appendChild(summary)
 
 //we add an event listener to our input field, and we take the e.target.value and assign it as our searchText in our filters object
 
