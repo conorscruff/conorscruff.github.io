@@ -40,7 +40,7 @@ const renderTodos = function(todos, filters){
 renderTodos(todos, filters);
 
 // we create a new array of incomplete todos on the basis of their completed attribute
-const incompleteTodos = todos.filter(function(todo) {
+const incompleteTodos = fileredTodos.filter(function(todo) {
 return !todo.completed
 })
 
