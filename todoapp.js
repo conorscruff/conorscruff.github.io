@@ -22,14 +22,14 @@ const renderTodos = function(todos, filters){
   const filteredTodos = todos.filter(function(todo){
     return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
   })
-  document.querySelector('#todo-list').innerHTML = '';
-  filteredTodos.forEach(function(todo){
-    const todoEl = document.createElement('p');
-    todoEl.textContent = todo.text;
-    document.querySelector('#todo-list').appendChild(todoEl);
+  console.log(filteredTodos);
+ // document.querySelector('#todo-list').innerHTML = '';
+ // filteredTodos.forEach(function(todo){
+  //  const todoEl = document.createElement('p');
+   // todoEl.textContent = todo.text;
+  //  document.querySelector('#todo-list').appendChild(todoEl);
   })
 }
-console.log(renderTodos(todos, filters));
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
