@@ -39,12 +39,12 @@ const renderTodos = function(todos, filters){
 //the initial call of renderTodos
 renderTodos(todos, filters);
                                            
-public const incompleteTodos = todos.filter(function(todo) {
+const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
 })
 
 const summary = document.createElement('h2')
-summary.textContent = 'You have ${incompleteTodos.length} todos left'
+summary.textContent = 'You have ${incompleteTodos} todos left'
 document.querySelector('body').appendChild(summary)
 
 //todos.forEach(function(todo) {
