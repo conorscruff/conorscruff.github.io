@@ -48,8 +48,8 @@ return !todo.completed
 const summary = document.createElement('h2')
 summary.textContent = 'Todos yet to complete: ' + incompleteTodos.length
 
-//we append this summary heading to the body of our document
-document.querySelector('body').appendChild(summary)
+//we append this summary heading to the div in our document
+document.querySelector('#todo-list').appendChild(summary)
 
 //we add an event listener to our input field, and we take the e.target.value and assign it as our searchText in our filters object
 
