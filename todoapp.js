@@ -44,7 +44,8 @@ return !todo.completed
 })
 
 const summary = document.createElement('h2')
-summary.textContent = 'You have ${incompleteTodos} todos left'
+summary.textContent = 'Todos yet to complete:' + incompleteTodos.length
+
 document.querySelector('body').appendChild(summary)
 
 //todos.forEach(function(todo) {
