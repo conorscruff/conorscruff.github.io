@@ -28,8 +28,10 @@ const renderTodos = function(todos, filters){
   //  const todoEl = document.createElement('p');
    // todoEl.textContent = todo.text;
   //  document.querySelector('#todo-list').appendChild(todoEl);
-  })
+  //})
+  
 }
+renderTodos(todos, filters);
                                            
 const incompleteTodos = todos.filter(function(todo) {
 return !todo.completed
