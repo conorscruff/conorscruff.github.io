@@ -57,3 +57,7 @@ filters.searchText = e.target.value;
 //we then rerender the todos based on the updated info in our searchText in input
   renderTodos(todos, filters);
 })
+document.querySelector('#add-todo').addEventListener('submit', function(e){
+  e.preventDefault();
+  console.log(e.target.elements.addTodo.value)
+})
