@@ -34,6 +34,7 @@ document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
   renderNotes(notes, filters)
 })
+//prevent the default behavior on submission of form (refreshing the browser and putting form data on end of address)
 document.querySelector('#name-form').addEventListener('submit', function(e){
  e.preventDefault();
 })
