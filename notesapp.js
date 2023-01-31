@@ -37,4 +37,5 @@ document.querySelector('#search-box').addEventListener('input', function(e){
 //prevent the default behavior on submission of form (refreshing the browser and putting form data on end of address)
 document.querySelector('#name-form').addEventListener('submit', function(e){
  e.preventDefault();
+ console.log(e.target.elements.firstName.value)
 })
