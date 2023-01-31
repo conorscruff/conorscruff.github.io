@@ -51,9 +51,7 @@ document.querySelector('#todo-list').appendChild(summary)
 renderTodos(todos, filters);
 
 
-
-
 document.querySelector('#add-todo').addEventListener('submit', function(e){
   e.preventDefault();
-  console.log(e.target.elements.addedTodo.value)
+  console.log(e)
 })
