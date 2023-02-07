@@ -54,4 +54,5 @@ renderTodos(todos, filters);
 document.querySelector('#todo-form').addEventListener('submit', function(e){
   e.preventDefault();
   console.log(e.target.elements.addedTodo.value)
+  e.target.elements.addedTodo.value = '';
 })
