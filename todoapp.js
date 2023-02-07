@@ -54,8 +54,8 @@ renderTodos(todos, filters);
 document.querySelector('#todo-form').addEventListener('submit', function(e){
   e.preventDefault();
   const newTodo = {
-    text: e.target.elements.addedTodo.value;
-    completed: false;
+    text: e.target.elements.addedTodo.value,
+    completed: false
   }
   todos.push(newTodo);
   renderTodos(todos, filters);
