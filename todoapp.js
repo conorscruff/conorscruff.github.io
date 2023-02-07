@@ -17,12 +17,19 @@ completed: true
 }]
 //our array of filters, with searchText as attribute
 const filters = {
-  searchText: ''
+  searchText: '',
+  hideCompleted: false
 }
 //function renderTodos, returns true if todo.text matches searchText
 const renderTodos = function(todos, filters){ 
+
   const filteredTodos = todos.filter(function(todo){
-    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())
+    if(filters.hideCompleted){
+      return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())&& !todo.completed;
+    }
+    else{
+    return todo.text.toLowerCase().includes(filters.searchText.toLowerCase());
+    }
   })
   //renders filteredTodos in console
   console.log(filteredTodos);
@@ -30,6 +37,7 @@ const renderTodos = function(todos, filters){
 const incompleteTodos = filteredTodos.filter(function(todo) {
 return !todo.completed
 })
+                                   })
  //we first wipe the innerHTML of our todo-list div
   document.querySelector('#todo-list').innerHTML = '';
 //we create a summary heading and define the text, along with the length of incompleteTodos array
@@ -57,4 +65,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e){
     completed: false});
   renderTodos(todos, filters);
   e.target.elements.addedTodo.value = '';
+})
+document.querySelector('#hide-complete').addEventListener('change', function(e){
+filters.hideCompleted = true;
 })
