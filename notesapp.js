@@ -9,6 +9,8 @@ title: 'Office modification',
 body: 'Get a new seat'
 }]
 
+localStorage.setItem('location', 'Belfast')
+
 const filters = {
  searchText: ''
 }
