@@ -37,7 +37,6 @@ const renderTodos = function(todos, filters){
 const incompleteTodos = filteredTodos.filter(function(todo) {
 return !todo.completed
 })
-                                   })
  //we first wipe the innerHTML of our todo-list div
   document.querySelector('#todo-list').innerHTML = '';
 //we create a summary heading and define the text, along with the length of incompleteTodos array
