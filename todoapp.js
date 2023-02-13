@@ -66,7 +66,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e){
   e.target.elements.addedTodo.value = '';
 })
 document.querySelector('#hide-complete').addEventListener('change', function(e){
-filters.hideCompleted = true;
+filters.hideCompleted = !filters.hideCompleted;
   console.log(filters.hideCompleted);
   renderTodos(todos, filters);
 })
