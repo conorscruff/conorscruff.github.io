@@ -9,8 +9,14 @@ title: 'Office modification',
 body: 'Get a new seat'
 }]
 
-//localStorage.setItem('location', 'Belfast');
-console.log(localStorage.getItem('location'));
+
+
+const user ={
+ name: 'Andrew',
+ age:45
+}
+const JSONuser = JSON.stringify(user);
+console.log(JSONuser);
 
 const filters = {
  searchText: ''
