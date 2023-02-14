@@ -11,14 +11,14 @@ body: 'Get a new seat'
 
 
 
-const user ={
- name: 'Andrew',
- age:45
-}
-const JSONuser = JSON.stringify(user);
-console.log(JSONuser);
+//const user ={
+ //name: 'Andrew',
+ //age:45
+//}
+//const JSONuser = JSON.stringify(user);
+//console.log(JSONuser);
 
-localStorage.setItem('user', JSONuser);
+//localStorage.setItem('user', JSONuser);
 const filters = {
  searchText: ''
 }
