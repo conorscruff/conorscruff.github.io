@@ -10,7 +10,9 @@ body: 'Get a new seat'
 }]
 
 
-
+const userJSON = localStorage.getItem('user');
+const user = JSON.parse(userJSON);
+console.log(`${user.name} is ${user.age}`);
 //const user ={
  //name: 'Andrew',
  //age:45
