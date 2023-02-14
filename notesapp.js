@@ -18,6 +18,7 @@ const user ={
 const JSONuser = JSON.stringify(user);
 console.log(JSONuser);
 
+localStorage.setItem('user', JSONuser);
 const filters = {
  searchText: ''
 }
