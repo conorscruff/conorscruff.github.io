@@ -29,8 +29,8 @@ renderNotes(notes, filters);
 
 document.querySelector('#create').addEventListener('click', function(e){
 notes.push({
-title:,
-body:
+title:'',
+body: ''
 })
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
