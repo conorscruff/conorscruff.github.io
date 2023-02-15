@@ -25,10 +25,13 @@ const renderNotes = function(notes, filters){
   document.querySelector('#list-notes').appendChild(noteEl)
  })
 }
-renderNotes(notes, filters)
+renderNotes(notes, filters);
+
 document.querySelector('#create').addEventListener('click', function(e){
-console.log('Did this work?')
-e.target.textContent = 'The button was clicked.'
+notes.push({
+title:,
+body:
+})
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
