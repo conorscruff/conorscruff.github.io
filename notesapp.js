@@ -20,8 +20,13 @@ const renderNotes = function(notes, filters){
  document.querySelector('#list-notes').innerHTML = ''
  
  filteredNotes.forEach(function (note){
-  const noteEl = document.createElement('p')
-  noteEl.textContent = note.title
+  const noteEl = document.createElement('p');
+  if(note.title > 0){
+   noteEl.textContent = note.title
+  }
+  else{
+   noteEL.textContent = 'Unnamed Note';
+  }
   document.querySelector('#list-notes').appendChild(noteEl)
  })
 }
