@@ -29,7 +29,6 @@ const renderNotes = function(notes, filters){
   }
   document.querySelector('#list-notes').appendChild(noteEl)
  })
-}
 renderNotes(notes, filters);
 
 document.querySelector('#create').addEventListener('click', function(e){
