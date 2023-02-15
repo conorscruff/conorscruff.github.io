@@ -1,26 +1,6 @@
-const notes = [{
-title: 'my next trip', 
-body: 'I would like to go to Spain'
-},{
-title: 'Habits to work on', 
-body: 'Exercise. Eating a little better.'
-},{
-title: 'Office modification',
-body: 'Get a new seat'
-}]
+const notes = []
 
-
-const userJSON = localStorage.getItem('user');
-const user = JSON.parse(userJSON);
-console.log(`${user.name} is ${user.age}`);
-//const user ={
- //name: 'Andrew',
- //age:45
-//}
-//const JSONuser = JSON.stringify(user);
-//console.log(JSONuser);
-
-//localStorage.setItem('user', JSONuser);
+//Check for existing saved data
 const filters = {
  searchText: ''
 }
