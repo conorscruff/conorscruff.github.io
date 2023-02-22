@@ -1,10 +1,10 @@
-const notes =[] 
+let notes =[] 
 const filters ={ 
 searchText: '' 
 } 
 const notesJSON = localStorage.getItem('notes') 
 if(notesJSON != null) { 
-
+notes = JSON.parse(notesJSON)
 }
 const renderNotes = function(notes, filters){ 
 const filteredNotes = notes.filter(function(note){return note.title.toLowerCase().includes(filters.searchText.toLowerCase())}) 
