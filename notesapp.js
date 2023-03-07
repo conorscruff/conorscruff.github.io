@@ -27,8 +27,8 @@ renderNotes(notes, filters)
 
 document.querySelector('#create').addEventListener('click', function(e){
 notes.push({
-title:'',
-body: ''
+title: e.target.value,
+    body: 'hello'
 })
 
  renderNotes(notes, filters);
