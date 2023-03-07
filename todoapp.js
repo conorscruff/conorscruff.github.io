@@ -63,7 +63,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e){
     completed: false
     })
   renderTodos(todos, filters);
-  localStorage.setItem('todos', JSON.stringify(notes))
+  localStorage.setItem('todos', JSON.stringify(todos))
   e.target.elements.addedTodo.value = '';
 })
 document.querySelector('#hide-complete').addEventListener('change', function(e){
