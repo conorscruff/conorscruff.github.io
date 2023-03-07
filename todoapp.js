@@ -32,7 +32,8 @@ document.querySelector('#todo-list').appendChild(summary)
  
   //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
   filteredTodos.forEach(function(todo){
-    const todoEl = generateTodoDom(todo);
+    const todoEl;
+    todoEl.textContent = generateTodoDom(todo);
     document.querySelector('#todo-list').appendChild(todoEl);
   })
   
