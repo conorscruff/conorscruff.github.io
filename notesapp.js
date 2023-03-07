@@ -13,7 +13,7 @@ title: '',
 })
 
  renderNotes(notes, filters);
- localStorage.setItem('notes', JSON.stringify(notes));
+saveNotes(notes);
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
