@@ -14,3 +14,12 @@ if(todosJSON !== null) {
 const saveTodos = function(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
 }
+const generateTodoDOM = function(todo){
+  document.createElement('p');
+    if(todo.text.length > 0){
+      return todo.text;
+    }
+    else{
+      return 'Unnamed Todo'
+    }
+}
