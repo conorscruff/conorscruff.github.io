@@ -28,5 +28,6 @@ document.querySelector('#list-notes').innerHTML = ''
 filteredNotes.forEach(function(note){ 
 const noteEl = generateNoteDOM(note);
 document.querySelector('#list-notes').appendChild(noteEl)
+})
 }
-)} 
+
