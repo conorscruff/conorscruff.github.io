@@ -5,9 +5,6 @@ const filters = {
   searchText: '',
   hideCompleted: false
 }
-// we check local storage for todosJSON
-
-
 //function renderTodos, returns true if todo.text matches searchText
 const renderTodos = function(todos, filters){ 
   const filteredTodos = todos.filter(function(todo){
@@ -58,7 +55,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e){
     completed: false
     })
   renderTodos(todos, filters);
-  localStorage.setItem('todos', JSON.stringify(todos))
+  saveTodos(todos); 
   e.target.elements.addedTodo.value = '';
 })
 document.querySelector('#hide-complete').addEventListener('change', function(e){
