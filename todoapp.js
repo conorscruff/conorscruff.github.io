@@ -5,9 +5,11 @@ const filters = {
   searchText: '',
   hideCompleted: false
 }
-
+// we check local storage for todosJSON
 const todosJSON = localStorage.getItem('todos');
+//if present
 if(todosJSON !== null) {
+  //we parse the info to todos array
   todos = JSON.parse(todosJSON)
 }
 
