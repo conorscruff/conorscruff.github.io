@@ -10,3 +10,7 @@ if(todosJSON !== null) {
     return []
   }
 }
+//Save todos to local storage
+const saveTodos = function(todos){
+  localStorage.setItem('todos', JSON.stringify(todos));
+}
