@@ -39,7 +39,7 @@ const renderTodos = function(todos, filters){
 const incompleteTodos = filteredTodos.filter(function(todo) {
 return !todo.completed
 })
- generateSummaryDOM(incompleteTodos);
+ document.querySelector('#todo-list').appendChild(generateSummaryDOM(incompleteTodos));
  
   //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
   filteredTodos.forEach(function(todo){
@@ -54,6 +54,7 @@ const generateSummaryDOM = function(incompleteTodos){
 //we create a summary heading and define the text, along with the length of incompleteTodos array
 const summary = document.createElement('h2')
 summary.textContent = `You still have ${incompleteTodos.length} todos remaining to complete`;
+  return summary;
 //we append this summary heading to the div in our document
-document.querySelector('#todo-list').appendChild(summary);
+
 }
