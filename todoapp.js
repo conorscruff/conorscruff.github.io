@@ -57,10 +57,13 @@ renderTodos(todos, filters);
 
 document.querySelector('#todo-form').addEventListener('submit', function(e){
   e.preventDefault();
-  todos.push({text: e.target.elements.addedTodo.value,
-    completed: false});
-  localStorage.setItem('todos', JSON.stringify(notes))
+  todos.push(
+    {
+    text: e.target.elements.addedTodo.value,
+    completed: false
+    })
   renderTodos(todos, filters);
+  localStorage.setItem('todos', JSON.stringify(notes))
   e.target.elements.addedTodo.value = '';
 })
 document.querySelector('#hide-complete').addEventListener('change', function(e){
