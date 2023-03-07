@@ -7,7 +7,9 @@ if(notesJSON != null) {
 notes = JSON.parse(notesJSON)
 }
 const renderNotes = function(notes, filters){ 
-const filteredNotes = notes.filter(function(note){return note.title.toLowerCase().includes(filters.searchText.toLowerCase())}) 
+const filteredNotes = notes.filter(function(note){
+ return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+}) 
 
 document.querySelector('#list-notes').innerHTML = '' 
 filteredNotes.forEach(function(note){ 
