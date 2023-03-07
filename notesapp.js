@@ -17,7 +17,7 @@ if (note.title.length > 0) {
 } else{
  noteEl.textContent = 'Unnamed note' 
 }
-document.querySelector('#notes').appendChild(noteEl)
+document.querySelector('#list-notes').appendChild(noteEl)
 }
 )} 
 renderNotes(notes, filters)
