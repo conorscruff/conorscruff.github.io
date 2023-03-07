@@ -26,6 +26,7 @@ const generateTodoDOM = function(todo){
 }
 //render our todo app
 const renderTodos = function(todos, filters){ 
+  debugger
   const filteredTodos = todos.filter(function(todo){
     if(filters.hideCompleted){
       return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())&& !todo.completed;
