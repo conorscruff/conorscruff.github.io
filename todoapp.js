@@ -8,7 +8,6 @@ const filters = {
 //the initial call of renderTodos
 renderTodos(todos, filters);
 
-
 document.querySelector('#todo-form').addEventListener('submit', function(e){
   e.preventDefault();
   todos.push(
@@ -20,6 +19,7 @@ document.querySelector('#todo-form').addEventListener('submit', function(e){
   saveTodos(todos); 
   e.target.elements.addedTodo.value = '';
 })
+
 document.querySelector('#hide-complete').addEventListener('change', function(e){
 filters.hideCompleted = e.target.checked;
   console.log(filters.hideCompleted);
