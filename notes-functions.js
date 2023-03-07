@@ -18,3 +18,15 @@ if (note.title.length > 0) {
 }
   return noteEl;
 }
+//Render notes application
+const renderNotes = function(notes, filters){ 
+const filteredNotes = notes.filter(function(note){
+ return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
+}) 
+
+document.querySelector('#list-notes').innerHTML = '' 
+filteredNotes.forEach(function(note){ 
+const noteEl = generateNoteDOM(note);
+document.querySelector('#list-notes').appendChild(noteEl)
+}
+)} 
