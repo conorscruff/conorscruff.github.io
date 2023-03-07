@@ -20,6 +20,6 @@ const generateTodoDOM = function(todo){
       return todo.text;
     }
     else{
-      return 'Unnamed Todo'
+      return 'Unnamed Todo';
     }
 }
