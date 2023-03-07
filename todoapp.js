@@ -1,17 +1,12 @@
 // our array of todos objects
-let todos = []
+const todos = getSavedTodos();
 //our array of filters, with searchText as attribute
 const filters = {
   searchText: '',
   hideCompleted: false
 }
 // we check local storage for todosJSON
-const todosJSON = localStorage.getItem('todos');
-//if present
-if(todosJSON !== null) {
-  //we parse the info to todos array
-  todos = JSON.parse(todosJSON)
-}
+
 
 //function renderTodos, returns true if todo.text matches searchText
 const renderTodos = function(todos, filters){ 
