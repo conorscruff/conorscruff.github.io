@@ -15,11 +15,12 @@ const saveTodos = function(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 const generateTodoDOM = function(todo){
-  document.createElement('p');
+ const todoEl = document.createElement('p');
     if(todo.text.length > 0){
-      return todo.text;
+      todoEl.textContent = todo.text; 
     }
     else{
-      return 'Unnamed Todo';
+     todoEl.textContent = "Unnamed Todo";
     }
+  return todoEl;
 }
