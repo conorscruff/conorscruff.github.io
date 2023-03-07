@@ -7,7 +7,7 @@ const filters = {
 }
 
 const todosJSON = localStorage.getItem('todos');
-if(todosJSON != null) {
+if(todosJSON !== null) {
   todos = JSON.parse(todosJSON)
 }
 
