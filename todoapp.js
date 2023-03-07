@@ -39,7 +39,12 @@ document.querySelector('#todo-list').appendChild(summary)
   //we iterate through filteredTodos, creating a new element for each and making the content of each the todo, appending this to our div.
   filteredTodos.forEach(function(todo){
     const todoEl = document.createElement('p');
-    todoEl.textContent = todo.text;
+    if(todo.text.length > 0){
+      todoEl.textContent = todo.text;
+    }
+    else{
+      todoEl.textContent = 'Unnamed Todo'
+    }
     document.querySelector('#todo-list').appendChild(todoEl);
   })
   
