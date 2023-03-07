@@ -1,28 +1,18 @@
 // our array of todos objects
-const todos = [{
-text: 'Order cat food',
-completed: false
-},{
-text: 'Clean kitchen',
-completed: true
-},{
-text: 'Buy food',
-completed: true
-},{
-text: 'Do work',
-completed: false
-},{
-text: 'Exercise',
-completed: true
-}]
+let todos = []
 //our array of filters, with searchText as attribute
 const filters = {
   searchText: '',
   hideCompleted: false
 }
+
+const todosJSON = localStorage.getItem('todos');
+if(todosJSON != null) {
+  todos = JSON.parse(todosJSON)
+}
+
 //function renderTodos, returns true if todo.text matches searchText
 const renderTodos = function(todos, filters){ 
-
   const filteredTodos = todos.filter(function(todo){
     if(filters.hideCompleted){
       return todo.text.toLowerCase().includes(filters.searchText.toLowerCase())&& !todo.completed;
