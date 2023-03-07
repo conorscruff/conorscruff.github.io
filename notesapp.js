@@ -3,7 +3,7 @@ const filters ={
 searchText: '' 
 } 
 const notesJSON = localStorage.getItem('notes') 
-if(notesJSON != null) { 
+if(notesJSON !== null) { 
 notes = JSON.parse(notesJSON)
 }
 const renderNotes = function(notes, filters){ 
