@@ -30,8 +30,9 @@ notes.push({
 title:'',
 body: ''
 })
-localStorage.setItem('notes', JSON.stringify(notes));
+
  renderNotes(notes, filters);
+ localStorage.setItem('notes', JSON.stringify(notes));
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
