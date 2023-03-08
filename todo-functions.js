@@ -45,7 +45,7 @@ const generateTodoDOM = function(todo){
     removeTodo(id);
     saveTodos();
     renderTodos();
-  }
+  })
   
   return todoEl;
 }
