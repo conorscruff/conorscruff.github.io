@@ -35,7 +35,7 @@ button.textContent = 'x';
     removeNote(note.id);
     saveNotes(notes);
     renderNotes(notes, filters);
-  }
+  })
                           
   //setup text
   const textEl = document.createElement('span');
