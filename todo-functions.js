@@ -29,6 +29,9 @@ const generateTodoDOM = function(todo){
   const todoCheckbox = document.createElement('input');
   todoCheckbox.setAttribute('type', 'checkbox');
   todoCheckbox.checked = todo.completed;
+  todoCheckbox.addEventListener('change', function(e){
+  todoCheckbox.checked = !todoCheckbox.checked;
+  })
  
   todoEl.appendChild(todoCheckbox);
   const todoText = document.createElement('span');
