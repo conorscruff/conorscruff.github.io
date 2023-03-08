@@ -10,6 +10,15 @@ if(todosJSON !== null) {
     return []
   }
 }
+//Remove todo by ID
+const removeTodo = function(id){
+  const todoIndex = todos.findIndex(todo, function(){
+  return todo.id === id;
+  })
+  if(todoIndex > -1){
+    todos.splice(todoIndex, 1)
+  }
+}
 //Save todos to local storage
 const saveTodos = function(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
@@ -32,6 +41,11 @@ const generateTodoDOM = function(todo){
   const removeTodoButton = document.createElement('button');
   todoEl.appendChild(removeTodoButton);
   removeTodoButton.textContent = 'x';
+  removeTodoButton.addEventListener('click', function(){
+    removeTodo(id);
+    saveTodos();
+    renderTodos();
+  }
   
   return todoEl;
 }
