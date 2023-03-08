@@ -11,7 +11,7 @@ return JSON.parse(notesJSON)
 //Remove a note from the list
 const removeNote = function(id){
   const noteIndex = notes.findIndex(function (note){
-    return note.id = id;
+    return note.id === id;
   })
 }
 
