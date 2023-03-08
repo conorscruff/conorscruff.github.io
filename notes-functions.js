@@ -41,7 +41,7 @@ button.textContent = 'x';
   const textEl = document.createElement('a');
 if (note.title.length > 0) { 
  textEl.textContent = note.title
-  textEl.href = '/edit.html'
+  textEl.setAttribute('href', '/edit.html');
 } else{
  textEl.textContent = 'Unnamed note' 
 }
