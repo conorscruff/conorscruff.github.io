@@ -42,7 +42,7 @@ const generateTodoDOM = function(todo){
   todoEl.appendChild(removeTodoButton);
   removeTodoButton.textContent = 'x';
   removeTodoButton.addEventListener('click', function(){
-    console.log(todo.id);
+    removeTodo(todo.id);
     saveTodos(todos);
     renderTodos(todos, filters);
   })
