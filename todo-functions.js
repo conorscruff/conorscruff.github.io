@@ -43,8 +43,8 @@ const generateTodoDOM = function(todo){
   removeTodoButton.textContent = 'x';
   removeTodoButton.addEventListener('click', function(){
     console.log(todo.id);
-    //saveTodos(todos);
-    //renderTodos(todos, filters);
+    saveTodos(todos);
+    renderTodos(todos, filters);
   })
   
   return todoEl;
