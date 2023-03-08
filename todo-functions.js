@@ -39,6 +39,8 @@ const generateTodoDOM = function(todo){
   todoCheckbox.checked = todo.completed;
   todoCheckbox.addEventListener('change', function(){
     toggleCheckbox(todo.id);
+    saveTodos(todos);
+    renderTodos(todos, filters);
   })
   todoEl.appendChild(todoCheckbox);
   const todoText = document.createElement('span');
