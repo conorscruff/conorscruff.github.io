@@ -15,13 +15,23 @@ const saveTodos = function(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
 }
 const generateTodoDOM = function(todo){
- const todoEl = document.createElement('p');
+ const todoEl = document.createElement('div');
+ //create a checkbox element
+  const todoCheckbox = document.createElement('input');
+  todoCheckbox.setAttribute('type', 'checkbox');
+  todoEl.appendChild(todoCheckbox);
+  const todoText = document.createElement('p');
     if(todo.text.length > 0){
-      todoEl.textContent = todo.text; 
+      todoText.textContent = todo.text; 
     }
     else{
-     todoEl.textContent = "Unnamed Todo";
+     todoText.textContent = "Unnamed Todo";
     }
+   //create button to remove todo
+  const removeTodoButton = document.createElement('button');
+  todoEl.appendChild(removeTodoButton);
+  removeTodoButton.textContent = 'x';
+  
   return todoEl;
 }
 //render our todo app
