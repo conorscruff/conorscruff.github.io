@@ -38,9 +38,10 @@ button.textContent = 'x';
   })
                           
   //setup text
-  const textEl = document.createElement('span');
+  const textEl = document.createElement('a');
 if (note.title.length > 0) { 
  textEl.textContent = note.title
+  textEl.href = '/edit.html'
 } else{
  textEl.textContent = 'Unnamed note' 
 }
