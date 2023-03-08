@@ -20,13 +20,14 @@ const generateTodoDOM = function(todo){
   const todoCheckbox = document.createElement('input');
   todoCheckbox.setAttribute('type', 'checkbox');
   todoEl.appendChild(todoCheckbox);
-  const todoText = document.createElement('p');
+  const todoText = document.createElement('span');
     if(todo.text.length > 0){
       todoText.textContent = todo.text; 
     }
     else{
      todoText.textContent = "Unnamed Todo";
     }
+  todoEl.appendChild(todoText);
    //create button to remove todo
   const removeTodoButton = document.createElement('button');
   todoEl.appendChild(removeTodoButton);
