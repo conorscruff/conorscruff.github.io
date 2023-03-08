@@ -15,16 +15,16 @@ localStorage.setItem('notes', JSON.stringify(notes));
 //Generate the DOM structure for a note
 const generateNoteDOM = function(note){
 const noteEl = document.createElement('div'); 
-  const textEl = document.createElement('p');
+  const textEl = document.createElement('span');
 const button = document.createElement('button');
 button.textContent = 'x';
+  noteEl.appendChild(button);
 if (note.title.length > 0) { 
  textEl.textContent = note.title
 } else{
  textEl.textContent = 'Unnamed note' 
 }
   noteEl.appendChild(textEl);
-  noteEl.appendChild(button);
   return noteEl;
 }
 //Render notes application
