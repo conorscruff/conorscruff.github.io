@@ -8,6 +8,14 @@ return JSON.parse(notesJSON)
     return []
   }
 }
+//Remove a note from the list
+const removeNote = function(id){
+  const noteIndex = notes.findIndex(function (note){
+    return note.id = id;
+  })
+}
+
+
 //Save notes to local storage
 const saveNotes = function(notes){
 localStorage.setItem('notes', JSON.stringify(notes));
@@ -19,6 +27,12 @@ const noteEl = document.createElement('div');
 const button = document.createElement('button');
 button.textContent = 'x';
   noteEl.appendChild(button);
+  
+  button.addEventListener('click', function(){
+    removeNote(note.id);
+    renderNotes(notes, filters);
+  }
+                          
   //setup text
   const textEl = document.createElement('span');
 if (note.title.length > 0) { 
