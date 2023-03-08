@@ -33,6 +33,7 @@ button.textContent = 'x';
   
   button.addEventListener('click', function(){
     removeNote(note.id);
+    saveNotes(notes);
     renderNotes(notes, filters);
   }
                           
