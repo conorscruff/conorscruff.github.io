@@ -15,10 +15,12 @@ localStorage.setItem('notes', JSON.stringify(notes));
 //Generate the DOM structure for a note
 const generateNoteDOM = function(note){
 const noteEl = document.createElement('div'); 
-  const textEl = document.createElement('span');
+  //setup remove note button
 const button = document.createElement('button');
 button.textContent = 'x';
   noteEl.appendChild(button);
+  //setup text
+  const textEl = document.createElement('span');
 if (note.title.length > 0) { 
  textEl.textContent = note.title
 } else{
