@@ -22,6 +22,7 @@ if (note.title.length > 0) {
 } else{
  noteEl.textContent = 'Unnamed note' 
 }
+  noteEl.appendChild(button);
   return noteEl;
 }
 //Render notes application
