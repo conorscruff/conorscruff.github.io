@@ -1,4 +1,3 @@
-console.log(uuidv4());
 // our array of todos objects
 const todos = getSavedTodos();
 //our array of filters, with searchText as attribute
