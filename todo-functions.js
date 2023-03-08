@@ -12,7 +12,7 @@ if(todosJSON !== null) {
 }
 //Remove todo by ID
 const removeTodo = function(id){
-  const todoIndex = todos.findIndex(todo, function(){
+  const todoIndex = todos.findIndex(id, function(){
   return todo.id === id;
   })
   if(todoIndex > -1){
