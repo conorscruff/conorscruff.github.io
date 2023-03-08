@@ -19,6 +19,14 @@ const removeTodo = function(id){
     todos.splice(todoIndex, 1)
   }
 }
+const toggleCheckbox = function(id){
+  const todo = todos.find(function(todo){
+  return todo.id === id;
+  })
+  if(todo !== undefined){
+    todo.completed = !todo.completed;
+  }
+}
 //Save todos to local storage
 const saveTodos = function(todos){
   localStorage.setItem('todos', JSON.stringify(todos));
@@ -29,10 +37,8 @@ const generateTodoDOM = function(todo){
   const todoCheckbox = document.createElement('input');
   todoCheckbox.setAttribute('type', 'checkbox');
   todoCheckbox.checked = todo.completed;
-  todoCheckbox.addEventListener('change', function(e){
-    todo.completed = e.target.checked;
-    saveTodos(todos);
-    renderTodos(todos, filters);
+  todoCheckbox.addEventListener('change', function(){
+    toggleCheckbox(todo.id);
   })
   todoEl.appendChild(todoCheckbox);
   const todoText = document.createElement('span');
