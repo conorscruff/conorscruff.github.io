@@ -12,8 +12,6 @@ notes.push({
 title: '',
     body: ''
 })
-
- renderNotes(notes, filters);
 saveNotes(notes);
 location.assign('/edit.html');
 })
