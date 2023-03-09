@@ -6,3 +6,5 @@ const note = notes.find(function(note){
 if(note === undefined){
   location.assign('/notes.html');
 }
+document.querySelector('#note-title').value = note.title;
+document.querySelector('#note-body').value = note.body;
