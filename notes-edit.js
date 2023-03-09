@@ -5,3 +5,4 @@ const note = notes.find(function(note){
 })
 if(note === "undefined"){
   location.assign('/index.html');
+}
