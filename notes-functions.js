@@ -39,7 +39,7 @@ button.textContent = 'x';
                           
   //setup text
   const textEl = document.createElement('a');
-  textEl.setAttribute('href', '/edit.html');
+  textEl.setAttribute('href', `/edit.html#${note.id}`);
 if (note.title.length > 0) { 
  textEl.textContent = note.title
 } else{
