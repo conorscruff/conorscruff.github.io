@@ -15,6 +15,7 @@ title: '',
 
  renderNotes(notes, filters);
 saveNotes(notes);
+location.assign('/edit.html');
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
