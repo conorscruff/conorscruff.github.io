@@ -14,5 +14,5 @@ note = notes.find(function(note){
   note.title = e.target.value;
   saveNotes(notes);
   renderNotes(notes, filters);
-}
+})
 })
