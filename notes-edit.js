@@ -4,5 +4,5 @@ const note = notes.find(function(note){
   return noteHash === note.id;
 })
 if(note === "undefined"){
-  location.assign('/index.html');
+  location.assign('/notes.html');
 }
