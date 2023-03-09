@@ -9,10 +9,5 @@ if(note === undefined){
 document.querySelector('#note-title').value = note.title;
 document.querySelector('#note-body').value = note.body;
 document.querySelector('#note-title').addEventListener('change', function(e){
-note = notes.find(function(note){
-  return noteHash === note.id;
-  note.title = e.target.value;
-  saveNotes(notes);
-  renderNotes(notes, filters);
-})
+console.log(e.target.value);
 })
