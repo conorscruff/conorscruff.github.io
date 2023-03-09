@@ -7,13 +7,14 @@ renderNotes(notes, filters)
 
 
 document.querySelector('#create').addEventListener('click', function(e){
+    const iduu = uuidv4();
 notes.push({
-    id: uuidv4(),
+    id: iduu,
 title: '',
     body: ''
 })
 saveNotes(notes);
-location.assign('/edit.html');
+location.assign(`/edit.html#$(iduu)`);
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
