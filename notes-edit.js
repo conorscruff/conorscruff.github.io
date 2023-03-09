@@ -10,6 +10,7 @@ if(note === undefined){
   note.title = e.target.value;
 document.querySelector('#note-title').value = note.title;
   saveNotes(notes);
+    renderNotes(notes, filters);
   }
    location.assign('/notes.html');
 })
