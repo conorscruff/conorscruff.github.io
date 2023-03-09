@@ -17,4 +17,5 @@ document.querySelector('#note-body').addEventListener('change',function(e){
 note.body = e.target.value;
 noteBodyOnEdit = note.body;
 saveNotes(notes);
+  location.assign('/notes.html');
 })
