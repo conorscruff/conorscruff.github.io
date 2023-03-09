@@ -8,6 +8,7 @@ if(note === undefined){
 }
   else{
   note.title = e.target.value;
+document.querySelector('#note-title').value = note.title;
   saveNotes(notes);
   }
    location.assign('/notes.html');
