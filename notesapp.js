@@ -14,7 +14,7 @@ title: '',
     body: ''
 })
 saveNotes(notes);
-location.assign(`/edit.html#$(iduu)`);
+location.assign(`/edit.html#${iduu}`);
 })
 document.querySelector('#search-box').addEventListener('input', function(e){
   filters.searchText = e.target.value
