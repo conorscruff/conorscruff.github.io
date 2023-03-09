@@ -23,5 +23,6 @@ document.querySelector('#remove-note').addEventListener('click', function(){
   note.body = '';
   noteBodyonEdit = '';
   saveNotes(notes);
+  renderNotes(notes, filters);
   location.assign('/notes.html');
 })
