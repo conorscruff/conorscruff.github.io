@@ -19,3 +19,9 @@ noteBodyOnEdit = note.body;
 saveNotes(notes);
   location.assign('/notes.html');
 })
+document.querySelector('#remove-notes'.addEventListener('click', function(){
+  note.body = '';
+  noteBodyonEdit = '';
+  saveNotes(notes);
+  location.assign('/notes.html');
+})
