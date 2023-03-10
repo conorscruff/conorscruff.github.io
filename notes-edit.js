@@ -20,9 +20,6 @@ saveNotes(notes);
   location.assign('/notes.html');
 })
 document.querySelector('#remove-note').addEventListener('click', function(){
-  note.body = '';
-  noteBodyonEdit = '';
-  saveNotes(notes);
-  renderNotes(notes, filters);
+  removeNote(noteHash);
   location.assign('/notes.html');
 })
