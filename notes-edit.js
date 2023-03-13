@@ -15,7 +15,6 @@ note.title = e.target.value;
 document.querySelector('#note-body').addEventListener('change',function(e){
 note.body = e.target.value;
 saveNotes(notes);
-  renderNotes(notes, filters);
   location.assign('/notes.html');
 })
 document.querySelector('#remove-note').addEventListener('click', function(){
