@@ -31,7 +31,7 @@ saveNoteElement.addEventListener('click', function(){
 window.addEventListener('storage', function(e){
 if(e.key.value==="notes"){
   notes = JSON.parse(e.newValue);
-  let note = notes.find(function(note){
+  note = notes.find(function(note){
   return noteHash === note.id;
 })
 if(note === undefined){
