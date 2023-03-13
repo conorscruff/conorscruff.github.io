@@ -6,17 +6,17 @@ const note = notes.find(function(note){
 if(note === undefined){
   location.assign('/notes.html');
 }
-let noteTitleOnEdit = document.querySelector('#note-title').value = note.title;
-let noteBodyOnEdit = document.querySelector('#note-body').value = note.body;
+document.querySelector('#note-title').value = note.title;
+document.querySelector('#note-body').value = note.body;
 document.querySelector('#note-title').addEventListener('change', function(e){
 note.title = e.target.value;
-  noteTitleOnEdit = note.title;
   saveNotes(notes);
+  renderNotes(notes, filters);
 })
 document.querySelector('#note-body').addEventListener('change',function(e){
 note.body = e.target.value;
-noteBodyOnEdit = note.body;
 saveNotes(notes);
+  renderNotes(notes, filters);
   location.assign('/notes.html');
 })
 document.querySelector('#remove-note').addEventListener('click', function(){
