@@ -3,8 +3,8 @@ const bodyElement = document.querySelector('#note-body');
 const removeElement = document.querySelector('#remove-note');
 const saveNoteElement = document.querySelector('#save-note');
 const noteHash = location.hash.substring(1);
-const notes = getSavedNotes();
-const note = notes.find(function(note){
+let notes = getSavedNotes();
+let note = notes.find(function(note){
   return noteHash === note.id;
 })
 if(note === undefined){
@@ -28,3 +28,8 @@ removeElement.addEventListener('click', function(){
 saveNoteElement.addEventListener('click', function(){
   location.assign('/notes.html');
 })
+window.addEventListener('storage', function(){
+if(key.value==="notes"){
+  notes = JSON.parse(e.newValue);
+}
+   })
