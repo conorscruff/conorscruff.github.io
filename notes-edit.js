@@ -28,8 +28,8 @@ removeElement.addEventListener('click', function(){
 saveNoteElement.addEventListener('click', function(){
   location.assign('/notes.html');
 })
-window.addEventListener('storage', function(){
-if(key.value==="notes"){
+window.addEventListener('storage', function(e){
+if(e.key.value==="notes"){
   notes = JSON.parse(e.newValue);
   let note = notes.find(function(note){
   return noteHash === note.id;
