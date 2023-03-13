@@ -37,5 +37,7 @@ if(key.value==="notes"){
 if(note === undefined){
   location.assign('/notes.html');
 }
+titleElement.value = note.title;
+bodyElement.value = note.body;
 }
    })
