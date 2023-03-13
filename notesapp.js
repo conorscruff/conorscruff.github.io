@@ -25,8 +25,7 @@ document.querySelector('#select-by').addEventListener('change', function(e){
 })
 window.addEventListener('storage', function(e){
     if(e.key==='notes'){
-        let note = JSON.parse(e.newValue);
-        notes.push(note);
+        notes = getSavedNotes();
         saveNotes(notes);
         renderNotes(notes, filters);
     }
