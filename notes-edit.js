@@ -22,6 +22,6 @@ saveNotes(notes);
 document.querySelector('#remove-note').addEventListener('click', function(){
   removeNote(noteHash);
   saveNotes(notes);
-  renderNotes(
+  renderNotes(notes, filters);
   location.assign('/notes.html');
 })
