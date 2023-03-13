@@ -1,3 +1,5 @@
+const titleElement = document.querySelector('#note-title');
+const bodyElement = document.querySelector('#note-body');
 const noteHash = location.hash.substring(1);
 const notes = getSavedNotes();
 const note = notes.find(function(note){
@@ -6,13 +8,13 @@ const note = notes.find(function(note){
 if(note === undefined){
   location.assign('/notes.html');
 }
-document.querySelector('#note-title').value = note.title;
-document.querySelector('#note-body').value = note.body;
-document.querySelector('#note-title').addEventListener('change', function(e){
+titleElement.value = note.title;
+bodyElement.value = note.body;
+titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   saveNotes(notes);
 })
-document.querySelector('#note-body').addEventListener('change',function(e){
+bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
 saveNotes(notes);
   location.assign('/notes.html');
