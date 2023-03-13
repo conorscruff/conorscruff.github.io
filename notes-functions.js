@@ -17,8 +17,6 @@ const removeNote = function(id){
   notes.splice(noteIndex, 1); 
   }
 }
-
-
 //Save notes to local storage
 const saveNotes = function(notes){
 localStorage.setItem('notes', JSON.stringify(notes));
