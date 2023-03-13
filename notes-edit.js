@@ -27,3 +27,4 @@ removeElement.addEventListener('click', function(){
 })
 saveNoteElement.addEventListener('click', function(){
   location.assign('/notes.html');
+})
