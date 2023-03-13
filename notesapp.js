@@ -21,6 +21,5 @@ document.querySelector('#search-box').addEventListener('input', function(e){
   renderNotes(notes, filters)
 })
 document.querySelector('#select-by').addEventListener('change', function(e){
- console.log("change");
+ console.log(e.target.value);
 })
-
