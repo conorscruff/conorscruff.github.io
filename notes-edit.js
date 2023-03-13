@@ -11,7 +11,6 @@ document.querySelector('#note-body').value = note.body;
 document.querySelector('#note-title').addEventListener('change', function(e){
 note.title = e.target.value;
   saveNotes(notes);
-  renderNotes(notes, filters);
 })
 document.querySelector('#note-body').addEventListener('change',function(e){
 note.body = e.target.value;
@@ -22,6 +21,5 @@ saveNotes(notes);
 document.querySelector('#remove-note').addEventListener('click', function(){
   removeNote(noteHash);
   saveNotes(notes);
-  renderNotes(notes, filters);
   location.assign('/notes.html');
 })
