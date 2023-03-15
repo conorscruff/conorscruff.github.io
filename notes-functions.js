@@ -46,7 +46,6 @@ if (note.title.length > 0) {
   noteEl.appendChild(textEl);
   return noteEl;
 }
-debugger;
 //Render notes application
 const renderNotes = function(notes, filters){ 
 const filteredNotes = notes.filter(function(note){
