@@ -14,15 +14,15 @@ titleElement.value = note.title;
 bodyElement.value = note.body;
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
-  //saveNotes(notes);
+  saveNotes(notes);
 })
 bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
-//saveNotes(notes);
+saveNotes(notes);
 })
 removeElement.addEventListener('click', function(){
   removeNote(noteHash);
-  //saveNotes(notes);
+  saveNotes(notes);
   location.assign('/notes.html');
 })
 saveNoteElement.addEventListener('click', function(){
