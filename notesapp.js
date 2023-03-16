@@ -33,6 +33,7 @@ const now = new Date('Thu Mar 16 2023 11:56:23');
 const then = new Date('Mon Oct 15 1984 11:56:23');
 if(now.getTime()<then.getTime()){
     console.log(now.toString())
+}
     else{
     console.log(then.toString())
     }
