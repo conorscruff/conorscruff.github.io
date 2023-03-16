@@ -29,3 +29,5 @@ if(e.key==='notes'){
     renderNotes(notes, filters);
 }
 })
+const now = new Date();
+console.log(now.toString());
