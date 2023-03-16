@@ -37,3 +37,5 @@ if(now.getTime()<then.getTime()){
     else{
     console.log(then.toString())
     }
+const now = moment();
+console.log(now.toString());
