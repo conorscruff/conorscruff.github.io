@@ -39,6 +39,5 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-  saveNotes(notes);
 }
    })
