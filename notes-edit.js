@@ -28,16 +28,16 @@ removeElement.addEventListener('click', function(){
 saveNoteElement.addEventListener('click', function(){
   location.assign('/notes.html');
 })
-//window.addEventListener('storage', function(e){
-//if(e.key==="notes"){
-//  notes = JSON.parse(e.newValue);
- // note = notes.find(function(note){
-//  return noteHash === note.id;
-//})
-//if(note === undefined){
- // location.assign('/notes.html');
-//}
-//titleElement.value = note.title;
-//bodyElement.value = note.body;
-//}
-//   })
+window.addEventListener('storage', function(e){
+if(e.key==="notes"){
+  notes = JSON.parse(e.newValue);
+  note = notes.find(function(note){
+  return noteHash === note.id;
+})
+if(note === undefined){
+  location.assign('/notes.html');
+}
+titleElement.value = note.title;
+bodyElement.value = note.body;
+}
+   })
