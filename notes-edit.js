@@ -3,13 +3,13 @@ const bodyElement = document.querySelector('#note-body');
 const removeElement = document.querySelector('#remove-note');
 const saveNoteElement = document.querySelector('#save-note');
 const noteHash = location.hash.substring(1);
-//let notes = getSavedNotes();
-//let note = notes.find(function(note){
-//  return noteHash === note.id;
-//})
-//if(note === undefined){
-//  location.assign('/notes.html');
-//}
+let notes = getSavedNotes();
+let note = notes.find(function(note){
+  return noteHash === note.id;
+})
+if(note === undefined){
+  location.assign('/notes.html');
+}
 titleElement.value = note.title;
 bodyElement.value = note.body;
 titleElement.addEventListener('change', function(e){
