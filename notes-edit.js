@@ -32,7 +32,7 @@ window.addEventListener('storage', function(e){
 if(e.key==='notes'){
   notes = JSON.parse(e.newValue);
   note = notes.find(function(note){
-  return noteHash === note.id;
+  return note.id === noteHash;
 })
 if(note === undefined){
   location.assign('/notes.html');
