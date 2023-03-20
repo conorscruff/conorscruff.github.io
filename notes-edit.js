@@ -15,7 +15,7 @@ if(note === undefined){
 titleElement.value = note.title;
 bodyElement.value = note.body;
 createdAtElement.textContent = `Created at: ${note.createdAt}`;
-updatedAtElement.textContent = generateLastEdited(moment().valueOf());
+updatedAtElement.textContent = generateLastEdited(note.updatedAt);
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   note.updatedAt = moment().valueOf();
@@ -23,7 +23,7 @@ note.title = e.target.value;
 })
 bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
-note.updatedAt = generateLastEdited(moment().valueOf());
+note.updatedAt = moment().valueOf();
 saveNotes(notes);
 })
 removeElement.addEventListener('click', function(){
@@ -45,6 +45,6 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-updatedAtElement.textContent = generateLastEdited(moment().valueOf());
+updatedAtElement.textContent = generateLastEdited(note.updatedAt);
 }
    })
