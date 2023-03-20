@@ -29,8 +29,3 @@ if(e.key==='notes'){
     renderNotes(notes, filters);
 }
 })
-
-const birthday = moment();
-birthday.year(1984).month(9).date(15);
-
-console.log(birthday.format('ll'));
