@@ -8,7 +8,7 @@ renderNotes(notes, filters)
 
 document.querySelector('#create').addEventListener('click', function(e){
     const iduu = uuidv4();
-    const timestamp = moment().valueOf();
+    const timestamp = moment().fromNow();
 notes.push({
     id: iduu,
 title: '',
