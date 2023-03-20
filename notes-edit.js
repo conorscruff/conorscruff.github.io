@@ -23,7 +23,7 @@ note.title = e.target.value;
 })
 bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
-note.updatedAt = moment().valueOf();
+note.updatedAt = moment().fromNow();
 saveNotes(notes);
 })
 removeElement.addEventListener('click', function(){
