@@ -13,7 +13,7 @@ notes.push({
 title: '',
     body: '',
     createdAt: moment(),
-    updatedAt; moment()
+    updatedAt: moment()
 })
 saveNotes(notes);
 location.assign(`/edit.html#${iduu}`);
