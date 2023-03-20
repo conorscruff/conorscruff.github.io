@@ -41,6 +41,6 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-createdAtElement.value = note.createdAt;
+createdAtElement.innerHTML = note.createdAt.toString();
 }
    })
