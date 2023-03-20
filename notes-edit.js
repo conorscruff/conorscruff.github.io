@@ -15,7 +15,7 @@ if(note === undefined){
 titleElement.value = note.title;
 bodyElement.value = note.body;
 createdAtElement.innerHTML = `Created at: ${note.createdAt}`;
-updatedAtElement.innerHTML = `Last updated at: ${note.updatedAt.}`;
+updatedAtElement.innerHTML = `Last updated at: ${note.updatedAt.fromNow()}`;
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   note.updatedAt = moment().valueOf();
