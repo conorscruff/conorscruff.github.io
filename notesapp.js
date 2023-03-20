@@ -11,7 +11,9 @@ document.querySelector('#create').addEventListener('click', function(e){
 notes.push({
     id: iduu,
 title: '',
-    body: ''
+    body: '',
+    createdAt: moment(),
+    updatedAt; moment()
 })
 saveNotes(notes);
 location.assign(`/edit.html#${iduu}`);
