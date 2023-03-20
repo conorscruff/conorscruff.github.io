@@ -13,7 +13,7 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-createdAtElement.innerHTML = note.createdAt.format('ll');
+createdAtElement.innerHTML = note.createdAt;
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   saveNotes(notes);
