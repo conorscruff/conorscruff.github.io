@@ -2,6 +2,7 @@ const titleElement = document.querySelector('#note-title');
 const bodyElement = document.querySelector('#note-body');
 const removeElement = document.querySelector('#remove-note');
 const saveNoteElement = document.querySelector('#save-note');
+const createdAtElement = document.querySelector('#created-at');
 const noteHash = location.hash.substring(1);
 let notes = getSavedNotes();
 let note = notes.find(function(note){
@@ -12,6 +13,7 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
+createdAtElement.value = note.createdAt;
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   saveNotes(notes);
@@ -39,5 +41,6 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
+createdAtElement.value = note.createdAt;
 }
    })
