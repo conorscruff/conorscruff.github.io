@@ -31,6 +31,6 @@ if(e.key==='notes'){
 })
 
 const birthday = moment();
-birthday.subtract(37, 'years').add(7, 'months').subtract(5, 'days')
+birthday.subtract(39, 'years').add(7, 'months').subtract(5, 'days')
 
 console.log(birthday.format('ll'));
