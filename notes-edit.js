@@ -19,11 +19,13 @@ updatedAtElement.textContent = generateLastEdited(note.updatedAt);
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
   note.updatedAt = moment().valueOf();
+  updatedAtElement.textContent = generateLastEdited(note.updatedAt);
   saveNotes(notes);
 })
 bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
 note.updatedAt = moment().valueOf();
+  updatedAtElement.textContent = generateLastEdited(note.updatedAt);
 saveNotes(notes);
 })
 removeElement.addEventListener('click', function(){
