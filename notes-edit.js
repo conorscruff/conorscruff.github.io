@@ -18,12 +18,12 @@ createdAtElement.textContent = `Created at: ${note.createdAt}`;
 updatedAtElement.textContent = `Last updated at: ${moment(note.updatedAt).fromNow()}`;
 titleElement.addEventListener('change', function(e){
 note.title = e.target.value;
-  note.updatedAt = moment().fromNow();
+  note.updatedAt = moment().valueOf();
   saveNotes(notes);
 })
 bodyElement.addEventListener('change',function(e){
 note.body = e.target.value;
-note.updatedAt = moment().fromNow();
+note.updatedAt = moment().valueOf();
 saveNotes(notes);
 })
 removeElement.addEventListener('click', function(){
@@ -45,6 +45,6 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-updatedAtElement.textContent = `Last updated at: ${moment().fromNow()}`;
+updatedAtElement.textContent = `Last updated at: ${moment(note.updatedAt).fromNow()}`;
 }
    })
