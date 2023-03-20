@@ -14,7 +14,7 @@ notes.push({
 title: '',
     body: '',
     createdAt: timestamp,
-    updatedAt: timestamp.fromNow();
+    updatedAt: timestamp.fromNow()
 })
 saveNotes(notes);
 location.assign(`/edit.html#${iduu}`);
