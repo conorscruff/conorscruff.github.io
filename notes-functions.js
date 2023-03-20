@@ -60,6 +60,6 @@ document.querySelector('#list-notes').appendChild(noteEl)
 }
 //Generate the last generated message
 const generateLastEdited = function(timestamp){
-return `Last edited: ${moments(timestamp).fromNow()}`
+return `Last edited: ${moment(timestamp).fromNow()}`
 }
 
