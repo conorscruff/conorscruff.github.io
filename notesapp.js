@@ -31,6 +31,6 @@ if(e.key==='notes'){
 })
 
 const birthday = moment();
-birthday.subtract(39, 'years').add(7, 'months').subtract(5, 'days')
+birthday.year(1984).month(9).date(15);
 
 console.log(birthday.format('ll'));
