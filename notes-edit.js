@@ -45,7 +45,7 @@ if(note === undefined){
 }
 titleElement.value = note.title;
 bodyElement.value = note.body;
-updatedAtElement.innerHTML = note.updatedAt;
+updatedAtElement.innerHTML = note.updatedAt.fromNow();
 //createdAtElement.innerHTML = note.createdAt.toString();
 }
    })
