@@ -33,4 +33,4 @@ if(e.key==='notes'){
 const birthday = moment();
 birthday.subtract(37, 'years').add(7, 'months').subtract(5, 'days')
 
-console.log(birthday.toString().format('ll');
+console.log(birthday.toString().format('ll'));
