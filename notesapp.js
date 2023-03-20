@@ -8,14 +8,13 @@ renderNotes(notes, filters)
 
 document.querySelector('#create').addEventListener('click', function(e){
     const iduu = uuidv4();
-    const created = moment().valueOf();
-    let updated = moment().valueOf();
+    const timestamp = moment().valueOf();
 notes.push({
     id: iduu,
 title: '',
     body: '',
-    createdAt: created,
-    updatedAt: updated
+    createdAt: timestamp,
+    updatedAt: timestamp
 })
 saveNotes(notes);
 location.assign(`/edit.html#${iduu}`);
