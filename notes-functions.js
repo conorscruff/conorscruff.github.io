@@ -58,4 +58,8 @@ const noteEl = generateNoteDOM(note);
 document.querySelector('#list-notes').appendChild(noteEl)
 })
 }
+//Generate the last generated message
+const generateLastEdited = function(timestamp){
+return `Last edited: ${moments(notes.updatedAt).fromNow()}`
+}
 
