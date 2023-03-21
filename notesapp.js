@@ -25,7 +25,7 @@ document.querySelector('#search-box').addEventListener('input', function(e){
   renderNotes(notes, filters)
 })
 document.querySelector('#select-by').addEventListener('change', function(e){
- console.log(e.target.value);
+ filters.sortBy = e.target.value;
 })
 window.addEventListener('storage', function(e){
 if(e.key==='notes'){
