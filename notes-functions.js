@@ -61,7 +61,7 @@ const sortNotes = function(notes, sortBy){
    }
   })
   } 
-  console.log('I got this far");
+ debugger;
   else if(sortBy === 'byCreated'){
     console.log('created is running');
   return notes.sort(function(a,b){
