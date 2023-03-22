@@ -61,6 +61,9 @@ const sortNotes = function(notes, sortBy){
    }
   })
   }
+  else{
+  return notes;
+  }
 }
 
 //Render notes application
