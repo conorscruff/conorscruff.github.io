@@ -62,6 +62,7 @@ const sortNotes = function(notes, sortBy){
   })
   }
   else if(sortBy = 'byCreated'){
+    console.log('created is running');
   return notes.sort(function(a,b){
     if(a.createdAt > b.createdAt){
     return -1;
