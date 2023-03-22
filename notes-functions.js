@@ -46,8 +46,26 @@ if (note.title.length > 0) {
   noteEl.appendChild(textEl);
   return noteEl;
 }
+//sort notes one of three selectable ways
+const sortNotes = function(notes, sortBy){
+  if(sortBy = 'byEdited'){
+  return notes.sort(function(a, b){
+    if(a.updatedAt > b.updatedAt){
+    return -1
+    }
+    else if(a.updatedAt < b.updatedAt){
+    return 1;
+    }
+   else{
+   return 0;
+   }
+  })
+  }
+}
+
 //Render notes application
 const renderNotes = function(notes, filters){ 
+  notes = sortNotes(notes, filters.sortBy);
 const filteredNotes = notes.filter(function(note){
  return note.title.toLowerCase().includes(filters.searchText.toLowerCase())
 }) 
