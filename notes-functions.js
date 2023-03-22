@@ -48,7 +48,7 @@ if (note.title.length > 0) {
 }
 //sort notes one of three selectable ways
 const sortNotes = function(notes, sortBy){
-  if(sortBy = 'byEdited'){
+  if(sortBy === 'byEdited'){
   return notes.sort(function(a, b){
     if(a.updatedAt > b.updatedAt){
     return -1
@@ -61,7 +61,7 @@ const sortNotes = function(notes, sortBy){
    }
   })
   }
-  else if(sortBy = 'byCreated'){
+  else if(sortBy === 'byCreated'){
     console.log('created is running');
   return notes.sort(function(a,b){
     if(a.createdAt > b.createdAt){
