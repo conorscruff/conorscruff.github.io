@@ -60,7 +60,6 @@ const sortNotes = function(notes, sortBy){
    return 0;
    }
   })
-  }
   else if(sortBy === 'byCreated'){
     console.log('created is running');
   return notes.sort(function(a,b){
