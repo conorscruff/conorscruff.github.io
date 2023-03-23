@@ -15,4 +15,4 @@ age: 21}
               
 const age21 = people.filter((person)=> person.age === 21);
 
-console.log(age21['name']);
+console.log(age21);
