@@ -13,7 +13,4 @@ age: 54},
 age: 21}
 ]
               
-const under30 = people.filter(function(person){
- return person.age < 30
-})
-console.log(under30)
+const age21 = people.filter((person)=> person.age === 21);
