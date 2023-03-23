@@ -5,10 +5,10 @@ console.log(square(5));
 
 const people = [{
 name: 'Conor', 
-age: 39}
+age: 39},
 {
 name: 'Bradley',
-age: 54}
+age: 54},
 {name: 'Oscar',
 age: 21}
 ]
