@@ -1,12 +1,7 @@
 //Read existing data from localStorage
 const getSavedNotes = () => {
   const notesJSON = localStorage.getItem('notes') 
-if(notesJSON !== null) { 
-return JSON.parse(notesJSON)
-}
-  else{
-    return []
-  }
+notesJSON !== null ? return JSON.parse(notesJSON) : return [];
 }
 //Remove a note from the list
 const removeNote = (id) => {
