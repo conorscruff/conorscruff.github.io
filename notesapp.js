@@ -7,7 +7,7 @@ sortBy: 'byEdited'
 renderNotes(notes, filters)
 
 
-document.querySelector('#create').addEventListener('click', function(e){
+document.querySelector('#create').addEventListener('click', (e) => {
     const iduu = uuidv4();
     const timestamp = moment().valueOf();
 notes.push({
@@ -20,15 +20,15 @@ title: '',
 saveNotes(notes);
 location.assign(`/edit.html#${iduu}`);
 })
-document.querySelector('#search-box').addEventListener('input', function(e){
+document.querySelector('#search-box').addEventListener('input', (e) => {
   filters.searchText = e.target.value
   renderNotes(notes, filters)
 })
-document.querySelector('#select-by').addEventListener('change', function(e){
+document.querySelector('#select-by').addEventListener('change',(e) =>{
  filters.sortBy = e.target.value;
     renderNotes(notes, filters);
 })
-window.addEventListener('storage', function(e){
+window.addEventListener('storage',(e) => {
 if(e.key==='notes'){
     notes = JSON.parse(e.newValue);
     renderNotes(notes, filters);
