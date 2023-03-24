@@ -2,7 +2,7 @@
 const getSavedTodos = () =>{
   const todosJSON = localStorage.getItem('todos');
 //if present
-todosJSON !== null ?  return JSON.parse(todosJSON):  return [];
+return todosJSON !== null ?  JSON.parse(todosJSON): [];
 }
 //Remove todo by ID
 const removeTodo = (id) => {
