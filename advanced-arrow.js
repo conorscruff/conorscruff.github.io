@@ -23,4 +23,8 @@ const add = function(a, b){
 console.log(add(11,22,33,44));
 
 const team = ['Tyler', 'Johnathan', 'Rachel'];
- console.log(team.length <= 4 ? `Team size: ${team.length})`: 'Too many members on your team')
+console.log(team.length <= 4 ? `Team size: ${team.length}`: 'Too many members on your team')
+team.push('Jordan');
+team.push('Brian');
+console.log(team.length <= 4 ? `Team size: ${team.length}`: 'Too many members on your team')
+ 
