@@ -31,8 +31,8 @@ console.log(team.length <= 4 ? `Team size: ${team.length}`: 'Too many members on
 const products = [];
 const product = products[0];
 if(product !== undefined){
-  console.log('Product not found.');
+  console.log('Product found.');
 }
 else{
-console.log('Product found.')
+console.log('Product not found.')
             }
