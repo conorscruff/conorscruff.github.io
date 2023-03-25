@@ -46,4 +46,4 @@ const getTip = (amount) => {
     throw "Argument must be a number."
   }
 }
-console.log(getTip(true));
+console.log(getTip(403947));
