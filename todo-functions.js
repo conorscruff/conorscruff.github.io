@@ -2,7 +2,7 @@
 const getSavedTodos = () =>{
   const todosJSON = localStorage.getItem('todos');
 //if present
-return todosJSON !== null ?  JSON.parse(todosJSON): [];
+return todosJSON ?  JSON.parse(todosJSON): [];
 }
 //Remove todo by ID
 const removeTodo = (id) => {
@@ -13,7 +13,7 @@ const removeTodo = (id) => {
 }
 const toggleCheckbox = (id) => {
   const todo = todos.find((todo) =>todo.id === id)
-  if(todo !== undefined){
+  if(todo){
     todo.completed = !todo.completed;
   }
 }
