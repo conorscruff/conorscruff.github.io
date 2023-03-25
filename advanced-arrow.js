@@ -38,13 +38,7 @@ console.log('Product not found.')
             }
 console.log('5' + 5);
 
-const getTip = (amount) => {
-  if(typeof amount === "number"){
-  return amount* .25
-  }
-  else{
-    throw "Argument must be a number."
-  }
+const getTip = (amount) => amount* .25 {
 }
 try{
 console.log(getTip(true));
