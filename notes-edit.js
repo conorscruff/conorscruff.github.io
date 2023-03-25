@@ -40,7 +40,7 @@ if(e.key==='notes'){
   note = notes.find(function(note){
   return note.id === noteHash;
 })
-if(note === undefined){
+if(!note){
   location.assign('/notes.html');
 }
 titleElement.value = note.title;
