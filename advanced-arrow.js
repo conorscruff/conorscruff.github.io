@@ -30,7 +30,7 @@ console.log(team.length <= 4 ? `Team size: ${team.length}`: 'Too many members on
  
 const products = [];
 const product = products[0];
-if('testing'){
+if(product){
   console.log('Product found.');
 }
 else{
