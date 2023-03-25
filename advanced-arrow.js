@@ -36,3 +36,4 @@ if(product){
 else{
 console.log('Product not found.')
             }
+console.log('5' + 5);
