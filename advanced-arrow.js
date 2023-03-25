@@ -46,4 +46,8 @@ const getTip = (amount) => {
     throw "Argument must be a number."
   }
 }
-console.log(getTip(403947));
+try{
+console.log(getTip(true));
+}
+catch(e){
+console.log('catch block is running.'}
