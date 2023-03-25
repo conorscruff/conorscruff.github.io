@@ -50,4 +50,5 @@ try{
 console.log(getTip(true));
 }
 catch(e){
-console.log('catch block is running.'}
+console.log('catch block is running.')
+}
