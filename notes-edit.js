@@ -7,7 +7,7 @@ const noteHash = location.hash.substring(1);
 const updatedAtElement = document.querySelector('#updated-at');
 let notes = getSavedNotes();
 let note = notes.find((note) => noteHash === note.id);
-if(note === undefined){
+if(!note){
   location.assign('/notes.html');
 }
 titleElement.value = note.title;
