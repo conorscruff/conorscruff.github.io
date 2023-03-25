@@ -43,7 +43,7 @@ const getTip = (amount) => {
   return amount* .25
   }
   else{
-    return "error"
+    throw "Argument must be a number."
   }
 }
 console.log(getTip(true));
