@@ -28,3 +28,5 @@ team.push('Jordan');
 team.push('Brian');
 console.log(team.length <= 4 ? `Team size: ${team.length}`: 'Too many members on your team')
  
+const products[];
+const product = products[0];
