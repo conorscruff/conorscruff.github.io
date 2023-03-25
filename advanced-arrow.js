@@ -38,8 +38,7 @@ console.log('Product not found.')
             }
 console.log('5' + 5);
 
-const getTip = (amount) => amount* .25 {
-}
+const getTip = (amount) => (typeof amount === "number") amount* .25: throw Error('Wrong type');
 try{
 console.log(getTip(true));
 }
