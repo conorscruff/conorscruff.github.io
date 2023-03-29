@@ -67,4 +67,4 @@ else{
  throw Error("Please provide numbers only");
 }
 }
-console.log(gradeCalc(true, "random"));
+console.log(gradeCalc(56, 56));
