@@ -46,7 +46,8 @@ catch(e){
 console.log('catch block is running.')
 }
 
-const gradeCalc = (score, totalScore) =>{
+const gradeCalc = (score, totalScore) => {
+  if(typeof score === "number" && typeof totalScore === "number){
 const percent = (score/totalScore) * 100 
 let letterGrade='' 
 if(percent>=90) {letterGrade = 'A'} 
@@ -62,11 +63,7 @@ if(percent>=90) {letterGrade = 'A'}
   else {letterGrade = 'F' } 
   return `You got a ${letterGrade} (${percent}%)!`
 }
-try{
-  console.log(gradeCalc(9, true))
+else{
+  return "Please provide numbers only";
 }
-catch(e) {
-throw(Error("Enter a number!"));
-  
-  }
-
+}
