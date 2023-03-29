@@ -47,7 +47,7 @@ console.log('catch block is running.')
 }
 
 const gradeCalc = (score, totalScore) => {
-  if(typeof score === "number" && typeof totalScore === "number){
+  if(typeof score === "number" && typeof totalScore === "number"){
 const percent = (score/totalScore) * 100 
 let letterGrade='' 
 if(percent>=90) {letterGrade = 'A'} 
