@@ -66,7 +66,7 @@ try{
   console.log(gradeCalc(9, true))
 }
 catch(e) {
-console.log(throw(Error("Enter a number!"));
+throw(Error("Enter a number!"));
   
   }
 
