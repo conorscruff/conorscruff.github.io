@@ -67,4 +67,9 @@ else{
  throw Error("Please provide numbers only");
 }
 }
-console.log(gradeCalc(56, 56));
+try{
+console.log(gradeCalc(56, 56))
+}
+catch(e){
+  console.log("Please enter a number in the score and total score fields")
+}
