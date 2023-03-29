@@ -46,7 +46,7 @@ catch(e){
 console.log('catch block is running.')
 }
 
-const gradeCalc => (score, totalScore){
+const gradeCalc = (score, totalScore) =>{
 const percent = (score/totalScore) * 100 
 let letterGrade='' 
 if(percent>=90) {letterGrade = 'A'} 
