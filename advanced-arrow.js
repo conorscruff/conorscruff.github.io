@@ -68,7 +68,7 @@ else{
 }
 }
 try{
-console.log(gradeCalc(56, 56))
+console.log(gradeCalc(56, true))
 }
 catch(e){
   console.log("Please enter a number in the score and total score fields")
