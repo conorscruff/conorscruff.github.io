@@ -64,6 +64,6 @@ if(percent>=90) {letterGrade = 'A'}
   return `You got a ${letterGrade} (${percent}%)!`
 }
 else{
-  return "Please provide numbers only";
+ throw Error("Please provide numbers only");
 }
 }
