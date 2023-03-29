@@ -46,7 +46,7 @@ catch(e){
 console.log('catch block is running.')
 }
 
-const gradeCalc = function (score, totalScore){
+const gradeCalc => (score, totalScore){
 const percent = (score/totalScore) * 100 
 let letterGrade='' 
 if(percent>=90) {letterGrade = 'A'} 
@@ -62,5 +62,11 @@ if(percent>=90) {letterGrade = 'A'}
   else {letterGrade = 'F' } 
   return `You got a ${letterGrade} (${percent}%)!`
 }
-const result = gradeCalc(9, 20);
-console.log(result);
+try{
+  console.log(gradeCalc(9, true))
+}
+catch(e) {
+console.log(throw(Error("Enter a number!"));
+  
+  }
+
