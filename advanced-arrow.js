@@ -62,4 +62,5 @@ if(percent>=90) {letterGrade = 'A'}
   else {letterGrade = 'F' } 
   return `You got a ${letterGrade} (${percent}%)!`
 }
-const result = gradeCalc(9, 20) console.log(result)
+const result = gradeCalc(9, 20);
+console.log(result);
